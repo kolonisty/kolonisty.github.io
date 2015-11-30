@@ -407,7 +407,7 @@ if(legendsFindText('Вы устали, отдохните чтобы продо�
     }
      }else {
          legendsLink(legendsFindLink("Начать бой"), 50/speed);
-         legendsLink(legendsFindLinkD("Отправиться"), 50/speed);
+         legendsLink(legendsFindLinkA("Отправиться"), 50/speed);
          legendsLink(legendsFindLinkD("Главная"), 1000);
 }
 
