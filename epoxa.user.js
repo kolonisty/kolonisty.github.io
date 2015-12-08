@@ -1,10 +1,10 @@
-// ==Userscript==
-// @name legendsgame_bot
-// @description бот для какой-то игры
-// @author vk.com/it256
-// @include http://epoxa.mobi/*
-// ==/Userscript==
-(function(){
+// ==UserScript==
+// @name         epoxa_Bot
+// @description  полный
+// @author       soloromail@gmail.com, Deimon, Ненчык-патыр, Старовер
+// @match        http://epoxa.mobi/*
+// ==/UserScript==
+/* jshint -W097 */
 if(location.href.match('epoxa.mobi')) {
 speed=1;
 //ТЕКСТ
@@ -12,7 +12,7 @@ function legendsFindText(tx) {if(document.body.innerHTML.match(tx)) {return true
 //ССЫЛКИ
 function legendsFindLink(tx) {l=0;for(i=0;i<document.links.length;i++){if(document.links[i].text.match(tx)) {l=document.links[i].href; break;}} if(l!=0) {return l;} else {return false;}}
 function legendsFindLinkA(tx) {l=0;for(i=0;i<document.links.length;i++){if(document.links[i].text==tx) {l=document.links[i].href; break;}} if(l!=0) {return l;} else {return false;}}
-function legendsFindLinkEnd(tx) {l=0;for(i=0;i<document.links.length;i++){if(document.links[i].text.match(tx)) {l=document.links[i].href;}} if(l!=0) {return l;} else {return false;}}
+function legendsFindLinkEnd(tx) {l=0;for(i=0;i<document.links.length-1;i++){if(document.links[i].text.match(tx)) {l=document.links[i].href;}} if(l!=0) {return l;} else {return false;}}
 function legendsFindLinkD(tx,bx) {l=0;for(i=0;i<document.links.length;i++){if(document.links[i].innerHTML.match(bx)&&document.links[i].text.match(tx)) {l=document.links[i].href; break;}} if(l!=0) {return l;} else {return false;}}
 //function legendsFindLinkD(tx,bx) {l=0;for(i=0;i<document.links.length;i++){if(document.links[i].innerHTML.match(bx)&&document.links[i].text.match(tx)) {l=document.links[i].href; break;}} if(l!=0) {return l;} else {return false;}}
 function legendsFindLinker(tx) {l=0;for(i=0;i<document.links.length;i++){if(document.links[i].href.match(tx)) {l=document.links[i].href; break;}} if(l!=0) {return l;} else {return false;}}
@@ -273,17 +273,27 @@ if(location.href.match('survival')){
      }
 }
 var d = new Date();
-if(d.getMinutes()==59&&(d.getHours()==2||d.getHours()==4||d.getHours()==6||d.getHours()==8||d.getHours()==10||d.getHours()==12||d.getHours()==16||d.getHours()==14||d.getHours()==18||d.getHours()==20||d.getHours()==22)){
-if(!location.href.match('massbattle'))legendsLink(legendsFindLinker(a3), 100);
+if(localStorage.getItem('pr')<time()&&d.getMinutes()==59&&(d.getHours()==2||d.getHours()==4||d.getHours()==6||d.getHours()==8||d.getHours()==10||d.getHours()==12||d.getHours()==16||d.getHours()==14||d.getHours()==18||d.getHours()==20||d.getHours()==22||d.getHours()==00)){
+if(!location.href.match('massbattle'))legendsLink('http://epoxa.mobi/massbattle', 10);
 else{
   if(legendsFindText('Причащение кровью')){
-      alert('d');
 if(legendsFindLink('Вступить')){
-        legendsLink(legendsFindLink('Вступить'), 800);
-        legendsSet('pb', 0);
+        legendsLink(legendsFindLink('Вступить'), 1);
+        legendsSet('pr', (time()+600));
 }else if(legendsFindLink('Обновить')){
-        legendsLink(legendsFindLink('Обновить'), 5000);
+        legendsLink(legendsFindLink('Главная'), 1);
 }
+}
+}
+}
+    if(localStorage.getItem('wa')<time()&&d.getMinutes()==59&&(d.getHours()==1||d.getHours()==3||d.getHours()==5||d.getHours()==7||d.getHours()==9||d.getHours()==11||d.getHours()==13||d.getHours()==15||d.getHours()==17||d.getHours()==19||d.getHours()==21||d.getHours()==23)){
+if(!location.href.match('wall'))legendsLink('http://epoxa.mobi/wall', 10);
+else{
+if(legendsFindLink('Вступить')){
+        legendsLink(legendsFindLink('Вступить'), 1);
+        legendsSet('wa', (time()+600));
+}else if(legendsFindLink('Обновить')){
+        legendsLink(legendsFindLink('Главная'), 1);
 }
 }
 }
@@ -407,7 +417,7 @@ if(legendsFindText('Вы устали, отдохните чтобы продо�
     }
      }else {
          legendsLink(legendsFindLink("Начать бой"), 50/speed);
-         legendsLink(legendsFindLinkA("Отправиться"), 50/speed);
+         legendsLink(legendsFindLinkEnd("Отправиться"), 50/speed);
          legendsLink(legendsFindLinkD("Главная"), 1000);
 }
 
@@ -423,13 +433,5 @@ if(legendsFindText('Вы устали, отдохните чтобы продо�
      if(legendsFindLink('Пропустить за')) {//Идём в выжива
         legendsLink(legendsFindLink("Главная"), 50/speed);
      }
-    
-    
 }
-
-
-
-
-
-
-})();
+// Your code here...
