@@ -1,0 +1,270 @@
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+<title>PointSmile</title>
+<script src="jquery-1.11.1.min.js"></script>
+<style>
+body {
+margin: 0;
+padding: 0;
+}
+#ppal {
+width:396px;
+min-height: 280px;
+margin: 100 auto;
+}
+#panel {
+width:360px;
+min-height: 270px;
+border: 5px #111111 solid;
+float: left;
+}
+#pal {
+width: 16px;
+height: 270px;
+float: right;
+background: #222222;
+border: 5px #111111 solid;
+}
+.smi1e {
+width: 16px;
+height: 16px;
+border: 1px #666666 solid;
+background: #ffffff;
+float: left;
+}
+#s1 {
+background: #000000;
+}
+#s2 {
+background: #ffffff;
+}
+#s3 {
+background: #ff0000;
+}
+#s4 {
+background: #00ff00;
+}
+#s5 {
+background: #0000ff;
+}
+#s6 {
+background: #ffaa00;
+}
+#s7 {
+background: #ccffff;
+}
+#s8 {
+background: #7f8836;
+}
+#s9 {
+background: #4b545c;
+}
+#s10 {
+background: #2f5b9c;
+}
+#s11 {
+background: #8c183d;
+}
+#s12 {
+background: #e32763;
+}
+#s13 {
+background: #7a8d68;
+}
+#s14 {
+background: #a36a00;
+}
+#s15 {
+background: #500252;
+}
+#s16 {
+background: #958a99;
+}
+#s17 {
+background: #ffffcc;
+}
+
+.fn {
+width: 360px;
+overflow: hidden;
+}
+#name {
+background: #000000;
+color: #ff0066;
+font-size: 16pt;
+border: 5px #111111 solid;
+position: relative;
+top: 5px;
+font-family: comic sans ms;
+}
+#bottom {
+width: 386px;
+height: 15px;
+background: #222222;
+color: #ffffff;
+font-size: 8pt;
+border: 5px #111111 solid;
+overflow: hidden;
+text-align: center;
+position: relative;
+bottom:5;
+}
+#bottom:hover {
+background: #333333;
+}
+#panelcode {
+width:360px;
+height: 270px;
+border: 5px #111111 solid;
+float: left;
+}
+#panelcodes {
+width:360px;
+height: 270px;
+}
+a {
+color: #ffffff;
+}
+.sm {
+width: 16px;height: 16px;border: 1px #666666 solid;float: left;
+}
+</style>
+<script>
+var x = 9;
+var y = 9;
+var def = '1';
+
+var nilsmile = '<div class="smi1e" id="s1"></div>';
+function startRender() {
+panel = document.getElementById('panel');
+for(iy=1; iy<=y; iy++){
+if(iy==1) panel.innerHTML='<div class="fn">';
+else panel.innerHTML+='<div class="fn">';
+for(ix=1; ix<=x; ix++){
+panel.innerHTML+=nilsmile;
+}
+panel.innerHTML+='</div>';
+}
+$(".smi1e").click(function() {
+$(this).attr({'id':'s'+def});
+});
+
+}
+</script>
+</head>
+<body onload="startRender();">
+<!--dd 
+
+По фиг мне на всех тех,
+Кто на крыше сидит
+И смотрит на небо,
+Но, как никчёмный паразит,
+Посылает нах`й зачем-то. :(
+
+vk.com/it256
+
+Ggad здесь, например.
+-->
+<div id="ppal">
+<div id="name" onclick="startRender();">
+PointSmile (<a href="http://vk.com/it256">vk.com/it256</a>)
+</div>
+<div id="panelcode" style="display:none">
+<textarea id="panelcodes">
+
+</textarea>
+</div>
+<div id="panel">
+
+</div>
+<div id="pal">
+<div  alt="1" id="smilecode" style="background: #000000;width: 16px;height: 16px;border: 1px #666666 solid;float: left;"class="sm"></div>
+<div alt="2" id="" class="sm" style="background: #ffffff;width: 16px;height: 16px;border: 1px #666666 solid;float: left;"></div>
+<div alt="3" id="" class="sm" style="background: #ff0000;width: 16px;height: 16px;border: 1px #666666 solid;float: left;"></div>
+<div alt="4" id="" class="sm" style="background: #00ff00;width: 16px;height: 16px;border: 1px #666666 solid;float: left;"></div>
+<div alt="5" id="" class="sm" style="background: #0000ff;width: 16px;height: 16px;border: 1px #666666 solid;float: left;"></div>
+<div alt="6" id="" class="sm" style="background: #ffaa00;width: 16px;height: 16px;border: 1px #666666 solid;float: left;"></div>
+<div alt="7" id="" class="sm" style="background: #ccffff;width: 16px;height: 16px;border: 1px #666666 solid;float: left;"></div>
+<div alt="8" id="" class="sm" style="background: #7f8836;width: 16px;height: 16px;border: 1px #666666 solid;float: left;"></div>
+<div alt="9" id="" class="sm" style="background: #4b545c;width: 16px;height: 16px;border: 1px #666666 solid;float: left;"></div>
+<div alt="10" id="" class="sm" style="background: #2f5b9c;width: 16px;height: 16px;border: 1px #666666 solid;float: left;"></div>
+<div alt="11" id="" class="sm" style="background: #8c183d;width: 16px;height: 16px;border: 1px #666666 solid;float: left;"></div>
+<div alt="12" id="" class="sm" style="background: #e32763;width: 16px;height: 16px;border: 1px #666666 solid;float: left;"></div>
+<div alt="13" id="" class="sm" style="background: #7a8d68;width: 16px;height: 16px;border: 1px #666666 solid;float: left;"></div>
+<div alt="14" id="" class="sm" style="background: #a36a00;width: 16px;height: 16px;border: 1px #666666 solid;float: left;"></div>
+<div alt="15" id="" class="sm" style="background: #500252;width: 16px;height: 16px;border: 1px #666666 solid;float: left;"></div>
+<div alt="16" id="" class="sm" style="background: #958a99;width: 16px;height: 16px;border: 1px #666666 solid;float: left;"></div>
+<div alt="17" id="" class="sm" style="background: #ffffcc;width: 16px;height: 16px;border: 1px #666666 solid;float: left;"></div>
+</div>
+<div id="bottom">
+Получить код для вставки
+</div>
+</div><script>
+pan = 1;
+$(".sm").click(function() {
+def=$(this).attr('alt');
+//$("#smilecode").css({'background':'none'});
+$("#smilecode").attr({'id':''});
+//$(this).css({'background':'#ffffff'});
+$(this).attr({'id':'smilecode'});
+});
+$("#bottom").click(function() {
+if(pan==1) {
+code = '';
+smm=new Array();
+smm[1]="x";
+smm[2]="key";
+smm[3]="000";
+smm[4]="[color=#00ff00]█[/color]";
+smm[5]="[color=#0000ff]█[/color]";
+smm[6]="[color=#ffaa00]█[/color]";
+smm[7]="[color=#ccffff]█[/color]";
+smm[8]="[color=#7f8836]█[/color]";
+smm[9]="[color=#4b545c]█[/color]";
+smm[10]="[color=#2f5b9c]█[/color]";
+smm[11]="[color=#8c183d]█[/color]";
+smm[12]="[color=#e32763]█[/color]";
+smm[13]="[color=#7a8d68]█[/color]";
+smm[14]="[color=#a36a00]█[/color]";
+smm[15]="[color=#500252]█[/color]";
+smm[16]="[color=#958a99]█[/color]";
+smm[17]="[color=#ffffcc]█[/color]";
+
+p=1;
+key=1;
+for(iy=1; iy<=y; iy++){
+code+='array(';
+if(ix==1) oo=0;
+for(ix=1; ix<=x; ix++){
+tx=document.getElementsByClassName('smi1e')[oo];
+for(it=1; it<=17; it++) {
+if(tx.getAttribute('id')=='s'+it){
+if(smm[it]=="x") code+='"x",';
+if(smm[it]=="000") {code+='"'+p+'",'; p+=1; }
+if(smm[it]=="key") {code+='"key'+key+'",'; key+=1; }
+//code+=smm[it];
+
+}
+}
+oo+=1;
+}
+code+='),\n';
+}
+$("#panelcode").css({'display':'block', 'overflow':'scroll'});
+$("#panel").css({'display':'none'});
+$("#bottom").html('Закрыть окно кода');
+$("#panelcodes").html(code);
+pan=0;
+}
+else {
+$("#panelcode").css({'display':'none'});
+$("#panel").css({'display':'block'});
+$("#bottom").html('Получить код для вставки');
+pan=1;
+}
+
+});
+</script>
+</body>
+</html>
